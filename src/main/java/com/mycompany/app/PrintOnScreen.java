@@ -5,14 +5,22 @@ package com.mycompany.app;
  */
 public class PrintOnScreen {
 
-    public boolean print (String message)
+    public String print (String message)
     {
         if (message == null || "".equals(message)){
-            return false;
+            return Constant.PARAMETER_ERROR;
         }
 
-        System.out.println(message);
-        return true;
+        try {
+            System.out.println(message);
+        }
+        catch (Exception ex)
+        {
+            return Constant.FAILED;
+        }
+
+
+        return Constant.SUCCESS;
 
     }
 

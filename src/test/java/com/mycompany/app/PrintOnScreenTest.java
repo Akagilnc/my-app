@@ -31,10 +31,10 @@ public class PrintOnScreenTest extends TestCase {
      */
     public void testPrintOnScreen()
     {
-        boolean result;
+        String result;
         PrintOnScreen printOnScreen = new PrintOnScreen();
         result = printOnScreen.print("Hello World");
 
-        assertTrue( result );
+        assertEquals(Constant.SUCCESS, result);
     }
 }
