@@ -35,6 +35,6 @@ public class PrintOnScreenTest extends TestCase {
         PrintOnScreen printOnScreen = new PrintOnScreen();
         result = printOnScreen.print("Hello World");
 
-        assertTrue( !result );
+        assertTrue( result );
     }
 }
